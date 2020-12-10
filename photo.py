@@ -16,6 +16,8 @@ def processPhoto(photoPath):
     print("got here")
     global processedPhotos, notPhotos
     try:
+
+        
         with Image.open(photoPath) as im:
             exif_data_PIL = im._getexif()
             if exif_data_PIL is not None:
